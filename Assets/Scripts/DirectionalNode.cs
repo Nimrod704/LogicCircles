@@ -14,6 +14,7 @@ public class DirectionalNode : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        sr.sprite = left;
         SwitchSprite();
     }
 
@@ -27,14 +28,17 @@ public class DirectionalNode : MonoBehaviour
     {
         if(current == "left")
         {
+            Debug.Log("Choose Left");
             sr.sprite = left;
         }
         else if(current == "right")
         {
+            Debug.Log("Choose Right");
             sr.sprite = right;
         }
         else
         {
+            Debug.Log("Choose None");
             sr.sprite = none;
         }
     }
